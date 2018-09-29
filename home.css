@@ -1,0 +1,183 @@
+
+#contact_page{
+	text-align: center;
+	vertical-align: middle;
+}
+#main_photo{
+	text-align: center;
+	width: 90%;
+	height: 700px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display:  width: 100px;
+    display: height: 100px;
+    display: background-position: center top;
+    display: background-position-x: center;
+    display: background-position-y: top;
+    display: background-repeat: no-repeat;
+    display: background-repeat-x: no-repeat;
+    display: background-repeat-y: no-repeat;
+    display: background-size: cover;
+    z-index: 1;
+    vertical-align: middle;
+    margin-bottom: 100px;
+}
+#all-info{
+	text-align: center;
+    width:60%;
+    height: 600px;
+    z-index: 2;
+    background-color: rgba(255,250,255,0.6);
+    position:absolute;
+    left: 17%;
+    top:110px;
+    padding: 20px;
+    font-size: large;
+    vertical-align: middle;
+}
+#navi_bar{
+	height: 50px;
+	background-color: #3A3431;
+	margin-bottom: 40px;
+	color: white;
+}
+#navi_bar h4{
+	display: inline-block;
+	text-align: center;
+	margin-top: 15px;
+	margin-right: 30%;
+}
+#navi_bar a .menu_logo , .logo{
+   vertical-align: middle;
+}
+#navi_bar .home_tag{
+	color: white;
+}
+
+#user{
+	margin-bottom: 120px;
+}
+.right , .left{
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #3A3431;
+	padding: 12px;
+	border-radius: 7px;
+	margin: 7%;
+}
+.view{
+   display: inline-block;
+	vertical-align: middle;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 7px;
+	margin: 9%;
+	color: white;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-size: 19px;
+}
+.view:hover {
+	background-color: #3A3431;
+}
+.down{
+	vertical-align: middle;
+	background-color: #3A3431;
+	padding: 12px;
+	border-radius: 7px;
+	margin: 20%;
+}
+#introduction{
+	text-align: center;
+    width:60%;
+    background-color: rgba(255,250,255,0.6);
+    position:relative;
+    left: 17%;
+    padding: 20px;
+    font-size: large;
+}
+#instagramFeed{
+	text-align: center;
+    width:60%;
+    background-color: #D5E6E7;
+    position:relative;
+    left: 17%;
+    padding: 20px;
+    font-size: large;
+    margin-bottom: 90px;
+}
+#instagramFeed a{
+	text-decoration: none;
+	color: white;
+	font-size: 40px;
+}
+.instagram_image{
+	border-radius: 30px;
+	margin-top: 12%;
+	vertical-align: middle;
+	left: 10%;
+}
+.instagram_des{
+	border-radius: 7px;
+	color: #3A3431;
+	background-color: white;
+	box-shadow: #3A3431;
+	width: 42%;
+	text-align: center;
+	left: 8%;
+	position: relative;
+	margin-left: 20%;
+	margin-top: 20%;
+	padding: 20px;
+
+}
+.item{
+	text-align: center;
+    background-color: rgba(255,250,255,0.6);
+    left: 10%;
+    padding: 20px;
+    font-size: large;
+    vertical-align: middle;
+}
+#footer{
+	text-align: center;
+	vertical-align: middle;
+	height: 50px;
+	background-color: #3A3431;
+	color: white;
+}
+#facebookLogo , #twitterLogo , #instagramLogo{
+	margin-right: 80px;
+	margin-top: 15px; 
+}
+
+.menu_logo{
+	margin-left: 30px;
+	margin-right: 30%;
+}
+.logo{
+	margin-right: 3%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
