@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Validation Contact</title>
+	<!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="contact_validation.css">
+  </head>
+
+  <body id="contact_page">
+      <header id="navi_bar">
+        <a href="#"><img class = "menu_logo" src="images/menu.png" alt = "a menu logo" width="20" height="20"></a>
+        <a href="#"><h4 class="contact_tag">Contact</h4></a>
+        <a href="#"><img class= "logo" src="images/logo.png" alt = "a logo to close page" width="20" height="20"></a>
+      </header>
+        <img  id= "main_photo" src="images/main.jpg" alt="the back ground photo">
+      <div id="all-info">
+        <h3>We would love to hear from you!</h3>
+        <span id="error"></span><br><br>
+  		     <form action="#" onsubmit="return vaidation()" class="bg-light">
+  			     <div class="form">
+               <label>First Name: </label>
+  			  	   <input id="first_name" class= "form_con" type="text" name="first_name" autocomplete="off"><br><br>
+  			  	   <span id="first" class="text-danger font-weight-bold"></span>
+  			     </div><br> 	
+  			     <div class="form">
+               <label>Last Name: </label>
+               <input id="last_name" type="text" name="last_name" autocomplete="off"><br><br>
+  			       <span id="last" class="text-danger font-weight-bold"></span>
+  		       </div><br>
+  		       <div class="form">
+               <label>The Email: </label>
+  			       <input id="e_mail" type="email" name="e_mail" autocomplete="off"><br><br>
+  			       <span id="mail" class="text-danger font-weight-bold"></span>
+  		       </div><br>
+  		       <div class="form">
+               <label>Mobile Num: </label>
+  			       <input id="mobile" type="text" name="mobile" autocomplete="off"><br><br>
+  			       <span id="mob" class="text-danger font-weight-bold"></span>
+  		       </div><br>
+  		       <div class="form">
+               <label>Your Message: </label>
+               <textarea id="message" name="message" autocomplete="off"></textarea><br><br>
+  		         <span id="msg" class="text-danger font-weight-bold"></span>
+  		       </div><br>
+  		       <input id="submit" type="submit" name="submit" value="submit" class="btn btn-success">
+  		     </form>  	
+
+      </div><br><br><!--the end of all-info div -->
+      <span id="thanksMessage"></span><br><br>
+  <footer id="footer">
+      <a href="#"><img id = "facebookLogo" src = "images/facebook.png" alt = "a logo for facebook"></a>
+      <a href="#"><img id = "twitterLogo" src = "images/twitter.png" alt = "a logo for twitter"></a>
+      <a href="#"><img id = "instagramLogo" src = "images/instagram.png" alt = "a logo for instagram"></a>
+  </footer>
+    <script type="text/javascript">
+      function vaidation(){
+        var first_name = document.getElementById("first_name").value;
+        var last_name = document.getElementById("last_name").value;
+        var e_mail = document.getElementById("e_mail").value;
+        var mobile = document.getElementById("mobile").value;
+        var message = document.getElementById("message").value;
+
+        //here i did validation to check all the fields.. 
+            if((first_name == "") && (last_name == "") && (e_mail == "") && (message == "")){
+              document.getElementById("error").innerHTML = "Please complete all fields!!";
+            }
+
+            //Here to validate the first name
+        if (first_name == "") {
+          document.getElementById("first").innerHTML = "Please write your first name!";
+          return false;
+        }
+        if ((first_name.length <= 3) || (first_name.length) > 14) {
+          document.getElementById("first").innerHTML = "Your first name should be between 4 to 13 characters!";
+          return false;
+        }
+        if (!isNaN(first_name)) {
+          document.getElementById("first").innerHTML = "Your first name should be just characters!";
+          return false;
+        }
+
+            //Here to validate the last name..
+          if (last_name == "") {
+          document.getElementById("last").innerHTML = "Please write your last name!";
+          return false;
+        }
+        if ((last_name.length) <= 3 || (last_name.length) > 14) {
+          document.getElementById("last").innerHTML = "Your last name should be between 4 to 13 characters!";
+          return false;
+        }
+        if (!isNaN(last_name)) {
+          document.getElementById("last").innerHTML = "Your last name should be just characters!";
+          return false;
+        }
+
+
+
+            //Here to validate the email..
+        if (e_mail == "") {
+          document.getElementById("mail").innerHTML = "Please write your email!";
+          return false;
+        }
+        if (e_mail.indexOf("@")<= 0) {
+          document.getElementById("mail").innerHTML = "Invalid email!";
+          return false;
+        }
+        if (e_mail.charAt(e_mail.length-4) != "." && e_mail.charAt(e_mail.length-3)!= ".") {
+          document.getElementById("mail").innerHTML = "Invalid position!";
+          return false;
+        }
+        
+
+
+        //to validate the phone number
+        if (isNaN(mobile)) {
+          document.getElementById('mob').innerHTML = "The Mobile Number should be just numbers";
+          return false;
+        }
+        if ((mobile.length) < 9 || (mobile.length) > 15 ) {
+          document.getElementById('mob').innerHTML = "The Mobile Number should be minimal 9 numbers and maximal 15";
+          return false;
+        }
+
+
+
+        //Here to validate the message..
+        if (message == "") {
+          document.getElementById("msg").innerHTML = "Please write your message!";
+          return false;
+        }
+        if ((message.length) < 20 || (message.length) > 100) {
+          document.getElementById("msg").innerHTML = "Your message should be between 20 and 100 characters!";
+          return false;
+        }
+
+
+
+        else {
+          var txt = "@ tamtamnl"; 
+          document.getElementById("thanksMessage").innerHTML = "Thanks for visiting us, for more info please follow us on Instagram!! " + txt.link("https://www.instagram.com/tamtamnl/");
+          return false;
+        }
+
+
+      }
+      
+    </script>
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
